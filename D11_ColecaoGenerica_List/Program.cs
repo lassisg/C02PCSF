@@ -60,6 +60,39 @@ namespace D11_ColecaoGenerica_List
 
             #endregion
 
+            #region IList vs IEnumerable
+
+            Utils.PrintHeader("IList<int>");
+
+            Generic generic01 = new Generic();
+
+            // Neste caso, o valor passado é o tamanho da lista de retorno
+            IList<int> list01 = generic01.EvenNumbers(30);
+
+            foreach (var item in list01)
+            {
+                System.Console.WriteLine(item);
+            }
+
+            Utils.CleanConsole();
+
+            Utils.PrintHeader("IEnumerable<int>");
+
+            Generic generic02 = new Generic();
+
+            // Neste caso, o valor passado é o último valor da lista de retorno
+            IEnumerable<int> list02 = generic01.EvenNumbersImproved(30);
+
+            foreach (var item in list02)
+            {
+                System.Console.WriteLine(item);
+            }
+
+            Utils.CleanConsole();
+
+            #endregion
+
+
         }
 
     }
