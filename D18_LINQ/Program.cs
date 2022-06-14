@@ -87,7 +87,59 @@ namespace D18_LINQ
             Utils.CleanConsole();
 
             #endregion
-            
+
+            #region LINQ tests
+
+            List<int> numbers3 = new List<int>() { 1, 2, 3, 4, 5 };
+
+            Utils.PrintSubHeader("LINQ tests | Skip");
+
+            Console.WriteLine("List");
+            foreach (var item in numbers3)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("\nSkipped 3 List");
+            var afterSkip = numbers3.Skip(3);
+            foreach (var item in afterSkip)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("\nSkipped 10 List");
+            afterSkip = numbers3.Skip(10);
+            foreach (var item in afterSkip)
+            {
+                Console.WriteLine(item);
+            }
+
+            Utils.PrintSubHeader("LINQ tests | Take");
+
+            Console.WriteLine("List");
+            foreach (var item in numbers3)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("\nTaken 3 List");
+            var afterTake = numbers3.Take(3);
+            foreach (var item in afterTake)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("\nTaken 10 List");
+            afterTake = numbers3.Take(10);
+            foreach (var item in afterTake)
+            {
+                Console.WriteLine(item);
+            }
+
+            Utils.CleanConsole();
+
+            #endregion
+
         }
 
     }
